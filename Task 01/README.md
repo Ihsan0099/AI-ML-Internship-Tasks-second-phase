@@ -37,9 +37,9 @@ The goal is to classify news headlines into categories such as *World, Sports, B
 
 ## 🚀 Tech Stack  
 - **Python**  
-- **PTensoeflow**  
+- **tensorflow**  
 - **Hugging Face Transformers**  
-- **Datasets (Hugging Face)**  
+- **Datasets (Kaggle)**  
 - **Scikit-learn** (for metrics)  
 - **Streamlit / Gradio** (for deployment)  
 
