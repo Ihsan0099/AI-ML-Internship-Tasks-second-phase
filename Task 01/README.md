@@ -32,12 +32,12 @@ The goal is to classify news headlines into categories such as *World, Sports, B
    - Compare results with baseline models for benchmarking.  
 
 4. **Deployment**  
-   - Deploy the trained model using **Streamlit** or **Gradio**.  
+   - Deploy the trained model using **Streamlit**.  
    - Provide a simple web interface where users can enter news headlines and get predicted categories in real-time.  
 
 ## 🚀 Tech Stack  
 - **Python**  
-- **PyTorch**  
+- **PTensoeflow**  
 - **Hugging Face Transformers**  
 - **Datasets (Hugging Face)**  
 - **Scikit-learn** (for metrics)  
