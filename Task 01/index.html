@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📰 News Topic Classifier</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e40af',
+            'primary-dark': '#1e3a8a',
+            accent: '#3b82f6',
+            success: '#10b981',
+            danger: '#ef4444'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="https://rsms.me/inter/font.css">
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <span class="text-blue-600 text-2xl">📰</span>
+      <h1 class="text-xl font-bold text-gray-800">News Classifier</h1>
+    </div>
+    <span class="text-sm text-gray-500">AI-Powered Topic Detection</span>
+  </nav>
+
+  <!-- Main -->
+  <main class="flex-grow flex items-center justify-center px-4 py-12">
+    <div class="w-full max-w-2xl bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+
+      <!-- Title -->
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-extrabold text-gray-900 mb-3">
+          Classify News Headlines
+        </h2>
+        <p class="text-gray-600">
+          Enter a news title below and see which category it belongs to.
+        </p>
+      </div>
+
+      <!-- Input Form -->
+      <form id="classificationForm" class="space-y-6">
+        <div>
+          <label for="headline" class="block text-sm font-medium text-gray-700 mb-1">
+            News Title
+          </label>
+          <input
+            type="text"
+            id="headline"
+            placeholder="e.g., Apple announces record profits in Q2 earnings"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
+            required
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-[1.01] focus:outline-none focus:ring-2 focus:ring-blue-300"
+        >
+          🔍 Classify Topic
+        </button>
+      </form>
+
+      <!-- Result -->
+      <div id="result" class="hidden mt-8 p-6 bg-blue-50 rounded-lg border border-blue-200 animate-fade-in">
+        <h3 class="text-lg font-bold text-blue-800 mb-2">
+          Predicted Topic: <span id="label" class="font-extrabold"></span>
+        </h3>
+        <p class="text-blue-700 text-sm" id="confidence"></p>
+      </div>
+
+      <!-- Error -->
+      <div id="error" class="hidden mt-8 p-6 bg-red-50 rounded-lg border border-red-200">
+        <p class="text-red-700" id="errorMessage"></p>
+      </div>
+
+      <!-- Examples -->
+      <details class="mt-8 group">
+        <summary class="text-sm font-medium text-primary cursor-pointer hover:underline list-none">
+          📌 Try Example Headlines
+        </summary>
+        <div class="mt-4 space-y-2 text-sm text-gray-700">
+          <p class="cursor-pointer p-2 hover:bg-gray-100 rounded transition" onclick="fillExample(this)">
+            Global leaders meet to discuss climate crisis
+          </p>
+          <p class="cursor-pointer p-2 hover:bg-gray-100 rounded transition" onclick="fillExample(this)">
+            Lionel Messi joins new football club in Miami
+          </p>
+          <p class="cursor-pointer p-2 hover:bg-gray-100 rounded transition" onclick="fillExample(this)">
+            Apple announces record profits in Q2 earnings
+          </p>
+          <p class="cursor-pointer p-2 hover:bg-gray-100 rounded transition" onclick="fillExample(this)">
+            Researchers develop breakthrough in quantum computing
+          </p>
+        </div>
+      </details>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 py-4 text-center text-gray-500 text-sm">
+    Built with ❤️ using Flask & Tailwind CSS
+  </footer>
+
+  <!-- Script -->
+  <script>
+    const form = document.getElementById('classificationForm');
+    const resultDiv = document.getElementById('result');
+    const errorDiv = document.getElementById('error');
+    const labelSpan = document.getElementById('label');
+    const confidenceP = document.getElementById('confidence');
+    const errorP = document.getElementById('errorMessage');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const title = document.getElementById('headline').value.trim();
+
+      // Reset
+      resultDiv.classList.add('hidden');
+      errorDiv.classList.add('hidden');
+
+      if (!title) {
+        showError("Please enter a news headline.");
+        return;
+      }
+
+      try {
+        const response = await fetch('/predict', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ title }),
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          labelSpan.textContent = data.label;
+          confidenceP.textContent = data.confidence ? `Confidence: ${data.confidence}` : '';
+          resultDiv.classList.remove('hidden');
+        } else {
+          showError(data.error || "Classification failed.");
+        }
+      } catch (err) {
+        showError("Could not connect to the server. Is Flask running?");
+      }
+    });
+
+    function showError(msg) {
+      errorP.textContent = msg;
+      errorDiv.classList.remove('hidden');
+    }
+
+    function fillExample(element) {
+      document.getElementById('headline').value = element.textContent;
+    }
+  </script>
+
+  <!-- Optional: Add simple animation -->
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fadeIn 0.4s ease-out;
+    }
+  </style>
+</body>
+</html>
