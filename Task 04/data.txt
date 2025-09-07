@@ -1,0 +1,823 @@
+Machine Learning Tutorial
+Machine learning is a branch of Artificial Intelligence that focuses on developing models and algorithms that let computers learn from data without being explicitly programmed for every task. In simple words, ML teaches the systems to think and understand like humans by learning from the data.
+Machine Learning is mainly divided into three core types: Supervised, Unsupervised and Reinforcement Learning along with two additional types, Semi-Supervised and Self-Supervised Learning.
+•	Supervised Learning: Trains models on labeled data to predict or classify new, unseen data.
+•	Unsupervised Learning: Finds patterns or groups in unlabeled data, like clustering or dimensionality reduction.
+•	Reinforcement Learning: Learns through trial and error to maximize rewards, ideal for decision-making tasks.
+Note: The following are not part of the original three core types of ML, but they have become increasingly important in real-world applications, especially in deep learning.
+Additional Types:
+•	Self-Supervised Learning: Self-supervised learning is often considered a subset of unsupervised learning, but it has grown into its own field due to its success in training large-scale models. It generates its own labels from the data, without any manual labeling. 
+•	Semi-Supervised Learning: This approach combines a small amount of labeled data with a large amount of unlabeled data. It’s useful when labeling data is expensive or time-consuming.
+Module 1: Machine Learning Pipeline
+In order to make predictions there are some steps through which data passes in order to produce a machine learning model that can make predictions.
+1.	ML workflow
+Machine Learning Lifecycle
+Machine learning lifecycle is a process that guides development and deployment of machine learning models in a structured way. It consists of various steps. Each step plays a crucial role in ensuring the success and effectiveness of the machine learning model. By following the machine learning lifecycle we can solve complex problems, can get data-driven insights and create scalable and sustainable models. The steps are:
+1.	Problem Definition
+2.	Data Collection
+3.	Data Cleaning and Preprocessing
+4.	Exploratory Data Analysis (EDA)
+5.	Feature Engineering and Selection
+6.	Model Selection
+7.	Model Training
+8.	Model Evaluation and Tuning
+9.	Model Deployment
+10.	Model Monitoring and Maintenance
+Step 1: Problem Definition
+In this initial phase we need to identify the business problem and frame it. By framing the problem in a comprehensive manner, team can establishes foundation for machine learning lifecycle. Crucial elements such as project objectives, desired outcomes and the scope of the task are carefully designed during this stage.
+Here are some steps for problem definition:
+•	Collaboration: Work together with stakeholders to understand and define the business problem.
+•	Clarity: Clearly write down the objectives, desired outcomes and scope of the task.
+•	Foundation: Establish a solid foundation for the machine learning process by framing the problem comprehensively.
+Step 2: Data Collection
+After problem definition, machine learning lifecycle progresses to data collection. This phase involves systematic collection of datasets that can be used as raw data to train model. The quality and diversity of the data collected directly impact the robustness and generalization of the model.
+During data collection we must consider the relevance of the data to the defined problem ensuring that the selected datasets consist all necessary features and characteristics. A well-organized approach for data collection helps in effective model training, evaluation and deployment ensuring that the resulting model is accurate and can be used for real world scenarios.
+Here are some basic features of Data Collection:
+•	Relevance: Collect data should be relevant to the defined problem and include necessary features.
+•	Quality: Ensure data quality by considering factors like accuracy and ethical use.
+•	Quantity: Gather sufficient data volume to train a robust model.
+•	Diversity: Include diverse datasets to capture a broad range of scenarios and patterns.
+Step 3: Data Cleaning and Preprocessing
+With datasets in hand now we need to do data cleaning and preprocessing. Raw data is often messy and unstructured and if we use this data directly to train then it can lead to poor accuracy and capturing unnecessary relation in data, data cleaning involves addressing issues such as missing values, outliers and inconsistencies in data that could compromise the accuracy and reliability of the machine learning model.
+Preprocessing is done by standardizing formats, scaling values and encoding categorical variables creating a consistent and well-organized dataset. The objective is to refine the raw data into a format that it is meaningful for analysis and training. By data cleaning and preprocessing we ensure that the model is trained on high-quality and reliable data.
+Here are the basic features of Data Cleaning and Preprocessing:
+•	Data Cleaning: Address issues such as missing values, outliers and inconsistencies in the data.
+•	Data Preprocessing: Standardize formats, scale values, and encode categorical variables for consistency.
+•	Data Quality: Ensure that the data is well-organized and prepared for meaningful analysis.
+Step 4: Exploratory Data Analysis (EDA)
+To find patterns and characteristics hidden in the data Exploratory Data Analysis (EDA) is used to uncover insights and understand the dataset's structure. During EDA patterns, trends and insights are provided which may not be visible by naked eyes. This valuable insight can be used to make informed decision.
+Visualizations help in showing statistical summary in easy and understandable way. It also helps in making choices in feature engineering, model selection and other critical aspects.
+Here are the basic features of Exploratory Data Analysis:
+•	Exploration: Use statistical and visual tools to explore patterns in data.
+•	Patterns and Trends: Identify underlying patterns, trends and potential challenges within the dataset.
+•	Insights: Gain valuable insights for informed decisions making in later stages.
+•	Decision Making: Use EDA for feature engineering and model selection.
+Step 5: Feature Engineering and Selection
+Feature engineering and selection is a transformative process that involve selecting only relevant features for model prediction. Feature selection refines pool of variables identifying the most relevant ones to enhance model efficiency and effectiveness.
+Feature engineering involves selecting relevant features or creating new features by transforming existing ones for prediction. This creative process requires domain expertise and a deep understanding of the problem ensuring that the engineered features contribute meaningfully for model prediction. It helps accuracy while minimizing computational complexity.
+Here are the basic features of Feature Engineering and Selection:
+•	Feature Engineering: Create new features or transform existing ones to capture better patterns and relationships.
+•	Feature Selection: Identify subset of features that most significantly impact the model's performance.
+•	Domain Expertise: Use domain knowledge to engineer features that contribute meaningfully for prediction.
+•	Optimization: Balance set of features for accuracy while minimizing computational complexity.
+Step 6: Model Selection
+For a good machine learning model, model selection is a very important part as we need to find model that aligns with our defined problem and the characteristics of the dataset. Model selection is a important decision that determines the algorithmic framework for prediction. The choice depends on the nature of the data, the complexity of the problem and the desired outcomes.
+Here are the basic features of Model Selection:
+•	Alignment: Select a model that aligns with the defined problem and characteristics of the dataset.
+•	Complexity: Consider the complexity of the problem and the nature of the data when choosing a model.
+•	Decision Factors: Evaluate factors like performance, interpretability and scalability when selecting a model.
+•	Experimentation: Experiment with different models to find the best fit for the problem.
+Step 7: Model Training
+With the selected model the machine learning lifecycle moves to model training process. This process involves exposing model to historical data allowing it to learn patterns, relationships and dependencies within the dataset.
+Model training is an iterative process where the algorithm adjusts its parameters to minimize errors and enhance predictive accuracy. During this phase the model fine-tunes itself for better understanding of data and optimizing its ability to make predictions. Rigorous training process ensure that the trained model works well with new unseen data for reliable predictions in real-world scenarios.
+Here are the basic features of Model Training:
+•	Training Data: Expose the model to historical data to learn patterns, relationships and dependencies.
+•	Iterative Process: Train the model iteratively, adjusting parameters to minimize errors and enhance accuracy.
+•	Optimization: Fine-tune model to optimize its predictive capabilities.
+•	Validation: Rigorously train model to ensure accuracy to new unseen data.
+Step 8: Model Evaluation and Tuning
+Model evaluation involves rigorous testing against validation or test datasets to test accuracy of model on new unseen data. We can use technique like accuracy, precision, recall and F1 score to check model effectiveness.
+Evaluation is critical to provide insights into the model's strengths and weaknesses. If the model fails to acheive desired performance levels we may need to tune model again and adjust its hyperparameters to enhance predictive accuracy. This iterative cycle of evaluation and tuning is crucial for achieving the desired level of model robustness and reliability.
+Here are the basic features of Model Evaluation and Tuning:
+•	Evaluation Metrics: Use metrics like accuracy, precision, recall and F1 score to evaluate model performance.
+•	Strengths and Weaknesses: Identify the strengths and weaknesses of the model through rigorous testing.
+•	Iterative Improvement: Initiate model tuning to adjust hyperparameters and enhance predictive accuracy.
+•	Model Robustness: Iterative tuning to achieve desired levels of model robustness and reliability.
+Step 9: Model Deployment
+Upon successful evaluation machine learning model is ready for deployment for real-world application. Model deployment involves integrating the predictive model with existing systems allowing business to use this for informed decision-making.
+Here are the basic features of Model Deployment:
+•	Integration: Integrate the trained model into existing systems or processes for real-world application.
+•	Decision Making: Use the model's predictions for informed decision.
+•	Practical Solutions: Deploy the model to transform theoretical insights into practical use that address business needs.
+•	Continuous Improvement: Monitor model performance and make adjustments as necessary to maintain effectiveness over time.
+The Machine Learning lifecycle is a comprehensive and recursive process that involves multiple steps from problem definition to model deployment and maintenance. Each step is essential for building a successful machine learning model that can provide valuable insights and predictions. By following the Machine learning lifecycle organizations, we can solve complex problems.
+
+ML | Overview of Data Cleaning
+Last Updated : 11 Jul, 2025
+•	
+•	
+•	
+Data cleaning is a important step in the machine learning (ML) pipeline as it involves identifying and removing any missing duplicate or irrelevant data. The goal of data cleaning is to ensure that the data is accurate, consistent and free of errors as raw data is often noisy, incomplete and inconsistent which can negatively impact the accuracy of model and its reliability of insights derived from it. Professional data scientists usually invest a large portion of their time in this step because of the belief that
+“Better data beats fancier algorithms”
+Clean datasets also helps in EDA that enhance the interpretability of data so that right actions can be taken based on insights.
+How to Perform Data Cleanliness?
+The process begins by thorough understanding data and its structure to identify issues like missing values, duplicates and outliers. Performing data cleaning involves a systematic process to identify and remove errors in a dataset. The following are essential steps to perform data cleaning.
+ Data Cleaning
+•	Removal of Unwanted Observations: Identify and remove irrelevant or redundant (unwanted) observations from the dataset. This step involves analyzing data entries for duplicate records, irrelevant information or data points that do not contribute to analysis and prediction. Removing them from dataset helps reducing noise and improving the overall quality of dataset.
+•	Fixing Structure errors: Address structural issues in the dataset such as inconsistencies in data formats or variable types. Standardize formats ensure uniformity in data structure and hence data consistency.
+•	Managing outliers: Outliers are those points that deviate significantly from dataset mean. Identifying and managing outliers significantly improve model accuracy as these extreme values influence analysis. Depending on the context decide whether to remove outliers or transform them to minimize their impact on analysis.
+•	Handling Missing Data: To handle missing data effectively we need to impute missing values based on statistical methods, removing records with missing values or employing advanced imputation techniques. Handling missing data helps preventing biases and maintaining the integrity of data.
+Throughout the process documentation of changes is crucial for transparency and future reference. Iterative validation is done to test effectiveness of the data cleaning resulting in a refined dataset and can be used for meaningful analysis and insights.
+Python Implementation for Database Cleaning
+Let's understand each step for Database Cleaning, using titanic dataset. Below are the necessary steps:
+•	Import the necessary libraries
+•	Load the dataset
+•	Check the data information using df.info()
+import pandas as pd
+import numpy as np
+
+# Load the dataset
+df = pd.read_csv('titanic.csv')
+df.head()
+Output:
+PassengerId    Survived    Pclass    Name    Sex    Age    SibSp    Parch    Ticket    Fare    Cabin    Embarked
+0    1    0    3    Braund, Mr. Owen Harris    male    22.0    1    0    A/5 21171    7.2500    NaN    S
+1    2    1    1    Cumings, Mrs. John Bradley (Florence Briggs Th...    female    38.0    1    0    PC 17599    71.2833    C85    C
+2    3    1    3    Heikkinen, Miss. Laina    female    26.0    0    0    STON/O2. 3101282    7.9250    NaN    S
+3    4    1    1    Futrelle, Mrs. Jacques Heath (Lily May Peel)    female    35.0    1    0    113803    53.1000    C123    S
+4    5    0    3    Allen, Mr. William Henry    male    35.0    0    0    373450    8.0500    NaN    S
+Data Inspection and Exploration
+Let's first understand the data by inspecting its structure and identifying missing values, outliers and inconsistencies and check the duplicate rows with below python code:
+df.duplicated()
+Output:
+0      False
+1      False
+2      False
+3      False
+4      False
+       ...  
+886    False
+887    False
+888    False
+889    False
+890    False
+Length: 891, dtype: bool
+Check the data information using df.info()
+df.info()
+Output:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 891 entries, 0 to 890
+Data columns (total 12 columns):
+ #   Column       Non-Null Count  Dtype  
+---  ------       --------------  -----  
+ 0   PassengerId  891 non-null    int64  
+ 1   Survived     891 non-null    int64  
+ 2   Pclass       891 non-null    int64  
+ 3   Name         891 non-null    object 
+ 4   Sex          891 non-null    object 
+ 5   Age          714 non-null    float64
+ 6   SibSp        891 non-null    int64  
+ 7   Parch        891 non-null    int64  
+ 8   Ticket       891 non-null    object 
+ 9   Fare         891 non-null    float64
+ 10  Cabin        204 non-null    object 
+ 11  Embarked     889 non-null    object 
+dtypes: float64(2), int64(5), object(5)
+memory usage: 83.7+ KB
+From the above data info we can see that Age and Cabin have an unequal number of counts. And some of the columns are categorical and have data type objects and some are integer and float values.
+Check the Categorical and Numerical Columns.
+# Categorical columns
+cat_col = [col for col in df.columns if df[col].dtype == 'object']
+print('Categorical columns :',cat_col)
+# Numerical columns
+num_col = [col for col in df.columns if df[col].dtype != 'object']
+print('Numerical columns :',num_col)
+Output:
+Categorical columns : ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+Numerical columns : ['PassengerId', 'Survived', 'Pclass', 'Age', 'SibSp', 'Parch', 'Fare']
+Check the total number of Unique Values in the Categorical Columns
+df[cat_col].nunique()
+Output:
+Name        891
+Sex           2
+Ticket      681
+Cabin       147
+Embarked      3
+dtype: int64
+Removal of all Above Unwanted Observations
+Duplicate observations most frequently arise during data collection and Irrelevant observations are those that don’t actually fit with the specific problem that we’re trying to solve. 
+•	Redundant observations alter the efficiency to a great extent as the data repeats and may add towards the correct side or towards the incorrect side, therefore producing useless results.
+•	Irrelevant observations are any type of data that is of no use to us and can be removed directly.
+Now we have to make a decision according to the subject of analysis which factor is important for our discussion.
+As we know our machines don't understand the text data. So we have to either drop or convert the categorical column values into numerical types. Here we are dropping the Name columns because the Name will be always unique and it hasn't a great influence on target variables. For the ticket, Let's first print the 50 unique tickets.
+df['Ticket'].unique()[:50]
+Output:
+array(['A/5 21171', 'PC 17599', 'STON/O2. 3101282', '113803', '373450',
+       '330877', '17463', '349909', '347742', '237736', 'PP 9549',
+       '113783', 'A/5. 2151', '347082', '350406', '248706', '382652',
+       '244373', '345763', '2649', '239865', '248698', '330923', '113788',
+       '347077', '2631', '19950', '330959', '349216', 'PC 17601',
+       'PC 17569', '335677', 'C.A. 24579', 'PC 17604', '113789', '2677',
+       'A./5. 2152', '345764', '2651', '7546', '11668', '349253',
+       'SC/Paris 2123', '330958', 'S.C./A.4. 23567', '370371', '14311',
+       '2662', '349237', '3101295'], dtype=object)
+From the above tickets, we can observe that it is made of two like first values 'A/5 21171' is joint from of 'A/5' and  '21171' this may influence our target variables. It will the case of Feature Engineering. where we derived new features from a column or a group of columns. In the current case, we are dropping the "Name" and "Ticket" columns.
+Drop Name and Ticket Columns
+df1 = df.drop(columns=['Name','Ticket'])
+df1.shape
+Output:
+(891, 10)
+Handling Missing Data
+Missing data is a common issue in real-world datasets and it can occur due to various reasons such as human errors, system failures or data collection issues. Various techniques can be used to handle missing data, such as imputation, deletion or substitution.
+Let's check the missing values columns-wise for each row using df.isnull() it checks whether the values are null or not and gives returns boolean values and sum() will sum the total number of null values rows and we divide it by the total number of rows present in the dataset then we multiply to get values in i.e per 100 values how much values are null.
+round((df1.isnull().sum()/df1.shape[0])*100,2)
+Output:
+PassengerId     0.00
+Survived        0.00
+Pclass          0.00
+Sex             0.00
+Age            19.87
+SibSp           0.00
+Parch           0.00
+Fare            0.00
+Cabin          77.10
+Embarked        0.22
+dtype: float64
+We cannot just ignore or remove the missing observation. They must be handled carefully as they can be an indication of something important. 
+•	The fact that the value was missing may be informative in itself.
+•	In the real world we often need to make predictions on new data even if some of the features are missing!
+As we can see from the above result that Cabin has 77% null values and Age has 19.87% and Embarked has 0.22% of null values.
+So, it's not a good idea to fill 77% of null values. So we will drop the Cabin column. Embarked column has only 0.22% of null values so, we drop the null values rows of Embarked column.
+df2 = df1.drop(columns='Cabin')
+df2.dropna(subset=['Embarked'], axis=0, inplace=True)
+df2.shape
+Output:
+(889, 9)
+Imputing the missing values from past observations.
+•	Again "missingness" is almost informative in itself and we should tell our algorithm if a value was missing.
+•	Even if we build a model to impute our values we’re not adding any real information. we’re just reinforcing the patterns already provided by other features. We can use Mean imputation or Median imputations for the case.
+Note: 
+•	Mean imputation is suitable when the data is normally distributed and has no extreme outliers.
+•	Median imputation is preferable when the data contains outliers or is skewed.
+# Mean imputation
+df3 = df2.fillna(df2.Age.mean())
+# Let's check the null values again
+df3.isnull().sum()
+Output:
+PassengerId    0
+Survived       0
+Pclass         0
+Sex            0
+Age            0
+SibSp          0
+Parch          0
+Fare           0
+Embarked       0
+dtype: int64
+Handling Outliers
+Outliers are extreme values that deviate significantly from the majority of the data. They can negatively impact the analysis and model performance. Techniques such as clustering, interpolation or transformation can be used to handle outliers.
+To check the outliers we generally use a box plot. A box plot is a graphical representation of a dataset's distribution. It shows a variable's median, quartiles and potential outliers. The line inside the box denotes the median while the box itself denotes the interquartile range (IQR). The box plot extend to the most extreme non-outlier values within 1.5 times the IQR. Individual points beyond the box are considered potential outliers. A box plot offers an easy-to-understand overview of the range of the data and makes it possible to identify outliers or skewness in the distribution.
+Let's plot the box plot for Age column data.
+import matplotlib.pyplot as plt
+
+plt.boxplot(df3['Age'], vert=False)
+plt.ylabel('Variable')
+plt.xlabel('Age')
+plt.title('Box Plot')
+plt.show()
+Output:
+Box Plot
+As we can see from the above Box and whisker plot, Our age dataset has outliers values. The values less than 5 and more than 55 are outliers.
+# calculate summary statistics
+mean = df3['Age'].mean()
+std  = df3['Age'].std()
+
+# Calculate the lower and upper bounds
+lower_bound = mean - std*2
+upper_bound = mean + std*2
+
+print('Lower Bound :',lower_bound)
+print('Upper Bound :',upper_bound)
+
+# Drop the outliers
+df4 = df3[(df3['Age'] >= lower_bound) 
+                & (df3['Age'] <= upper_bound)]
+Output:
+Lower Bound : 3.705400107925648
+Upper Bound : 55.578785285332785
+Similarly, we can remove the outliers of the remaining columns.
+Data Transformation 
+Data transformation involves converting the data from one form to another to make it more suitable for analysis. Techniques such as normalization, scaling or encoding can be used to transform the data.
+Data validation and verification
+Data validation and verification involve ensuring that the data is accurate and consistent by comparing it with external sources or expert knowledge. 
+For the machine learning prediction we separate independent and target features. Here we will consider only 'Sex' 'Age' 'SibSp', 'Parch' 'Fare' 'Embarked' only as the independent features and Survived as target variables because PassengerId will not affect the survival rate.
+X = df3[['Pclass','Sex','Age', 'SibSp','Parch','Fare','Embarked']]
+Y = df3['Survived']
+Data formatting
+Data formatting involves converting the data into a standard format or structure that can be easily processed by the algorithms or models used for analysis. Here we will discuss commonly used data formatting techniques i.e. Scaling and Normalization.
+Scaling
+•	Scaling involves transforming the values of features to a specific range. It maintains the shape of the original distribution while changing the scale.
+•	Particularly useful when features have different scales, and certain algorithms are sensitive to the magnitude of the features.
+•	Common scaling methods include Min-Max scaling and Standardization (Z-score scaling).
+Min-Max Scaling: Min-Max scaling rescales the values to a specified range, typically between 0 and 1. It preserves the original distribution and ensures that the minimum value maps to 0 and the maximum value maps to 1.
+from sklearn.preprocessing import MinMaxScaler
+
+# initialising the MinMaxScaler
+scaler = MinMaxScaler(feature_range=(0, 1))
+
+# Numerical columns
+num_col_ = [col for col in X.columns if X[col].dtype != 'object']
+x1 = X
+# learning the statistical parameters for each of the data and transforming
+x1[num_col_] = scaler.fit_transform(x1[num_col_])
+x1.head()
+Output:
+Pclass    Sex    Age    SibSp    Parch    Fare    Embarked
+0    1.0    male    0.271174    0.125    0.0    0.014151    S
+1    0.0    female    0.472229    0.125    0.0    0.139136    C
+2    1.0    female    0.321438    0.000    0.0    0.015469    S
+3    0.0    female    0.434531    0.125    0.0    0.103644    S
+4    1.0    male    0.434531    0.000    0.0    0.015713    S
+Standardization (Z-score scaling): Standardization transforms the values to have a mean of 0 and a standard deviation of 1. It centers the data around the mean and scales it based on the standard deviation. Standardization makes the data more suitable for algorithms that assume a Gaussian distribution or require features to have zero mean and unit variance.
+Z = (X - μ) / σ
+Where,
+•	X = Data
+•	μ = Mean value of X
+•	σ = Standard deviation of X
+Data Cleansing Tools
+Some data cleansing tools:
+•	OpenRefine: A powerful open-source tool for cleaning and transforming messy data. It supports tasks like removing duplicate and data enrichment with easy-to-use interface.
+•	Trifacta Wrangler: A user-friendly tool designed for cleaning, transforming and preparing data for analysis. It uses AI to suggest transformations to streamline workflows.
+•	TIBCO Clarity: A tool that helps in profiling, standardizing and enriching data. It’s ideal to make high quality data and consistency across datasets.
+•	Cloudingo: A cloud-based tool focusing on de-duplication, data cleansing and record management to maintain accuracy of data.
+•	IBM Infosphere Quality Stage: It’s highly suitable for large-scale and complex data.
+Advantages and Disadvantages of Data Cleaning in Machine Learning
+Advantages:
+•	Improved model performance: Removal of errors, inconsistencies and irrelevant data helps the model to better learn from the data.
+•	Increased accuracy: Helps ensure that the data is accurate, consistent and free of errors.
+•	Better representation of the data: Data cleaning allows the data to be transformed into a format that better represents the underlying relationships and patterns in the data.
+•	Improved data quality: Improve the quality of the data, making it more reliable and accurate.
+•	Improved data security: Helps to identify and remove sensitive or confidential information that could compromise data security.
+Disadvantages:
+•	Time-consuming: It is very time consuming task specially for large and complex datasets.
+•	Error-prone: It can result in loss of important information.
+•	Cost and resource-intensive: It is resource-intensive process that requires significant time, effort and expertise. It can also require the use of specialized software tools.
+•	Overfitting: Data cleaning can contribute to overfitting by removing too much data.
+So we have discussed four different steps in data cleaning to make the data more reliable and to produce good results. After properly completing the Data Cleaning steps, we’ll have a robust dataset that avoids any error and inconsistency. In summary, data cleaning is a crucial step in the data science pipeline that involves identifying and correcting errors, inconsistencies and inaccuracies in the data to improve its quality and usability.
+What is Exploratory Data Analysis?
+Last Updated : 06 Aug, 2025
+•	
+•	
+•	
+Exploratory Data Analysis (EDA) is a important step in data science and data analytics as it visualises data to understand its main features, find patterns and discover how different parts of the data are connected. In this article, we will see more about Exploratory Data Analysis (EDA).
+  
+Why Exploratory Data Analysis Important?
+Exploratory Data Analysis (EDA) is important for several reasons in the context of data science, data analytics and statistical modeling. Here are some of the key reasons:
+1.	It helps to understand the dataset by showing how many features it has, what type of data each feature contains and how the data is distributed.
+2.	It helps to identify hidden patterns and relationships between different data points which help us in and model building.
+3.	Allows to identify errors or unusual data points (outliers) that could affect our results.
+4.	The insights gained from EDA help us to identify most important features for building models and guide us on how to prepare them for better performance.
+5.	By understanding the data it helps us in choosing best modeling techniques and adjusting them for better results.
+Types of Exploratory Data Analysis
+There are various types of EDA based on nature of records. Depending on the number of columns we are analyzing we can divide EDA into three types:
+1. Univariate Analysis
+Univariate analysis focuses on studying one variable to understand its characteristics. It helps to describe data and find patterns within a single feature. Various common methods like histograms are used to show data distribution, box plots to detect outliers and understand data spread and bar charts for categorical data. Summary statistics like mean, median, mode, variance and standard deviation helps in describing the central tendency and spread of the data
+2. Bivariate Analysis
+Bivariate Analysis focuses on identifying relationship between two variables to find connections, correlations and dependencies. It helps to understand how two variables interact with each other. Some key techniques include:
+•	Scatter plots which visualize the relationship between two continuous variables.
+•	Correlation coefficient measures how strongly two variables are related which commonly use Pearson's correlation for linear relationships.
+•	Cross-tabulation or contingency tables shows the frequency distribution of two categorical variables and help to understand their relationship.
+•	Line graphs are useful for comparing two variables over time in time series data to identify trends or patterns.
+•	Covariance measures how two variables change together but it is paired with the correlation coefficient for a clearer and more standardized understanding of the relationship.
+3. Multivariate Analysis
+Multivariate Analysis identify relationships between two or more variables in the dataset and aims to understand how variables interact with one another which is important for statistical modeling techniques. It include techniques like:
+•	Pair plots which shows the relationships between multiple variables at once and helps in understanding how they interact.
+•	Another technique is Principal Component Analysis (PCA) which reduces the complexity of large datasets by simplifying them while keeping the most important information.
+•	Spatial Analysis is used for geographical data by using maps and spatial plotting to understand the geographical distribution of variables.
+•	Time Series Analysis is used for datasets that involve time-based data and it involves understanding and modeling patterns and trends over time. Common techniques include line plots, autocorrelation analysis, moving averages and ARIMA models.
+Steps for Performing Exploratory Data Analysis
+It involves a series of steps to help us understand the data, uncover patterns, identify anomalies, test hypotheses and ensure the data is clean and ready for further analysis. It can be done using different tools like:
+•	In Python, Pandas is used to clean, filter and manipulate data. Matplotlib helps to create basic visualizations while Seaborn makes more attractive plots. For interactive visualizations Plotly is a good choice.
+•	In R, ggplot2 is used for creating complex plots, dplyr helps with data manipulation and tidyr makes sure our data is organized and easy to work with.
+Its step includes:
+Step 1: Understanding the Problem and the Data
+The first step in any data analysis project is to fully understand the problem we're solving and the data we have. This includes asking key questions like:
+1.	What is the business goal or research question?
+2.	What are the variables in the data and what do they represent?
+3.	What types of data (numerical, categorical, text, etc.) do you have?
+4.	Are there any known data quality issues or limitations?
+5.	Are there any domain-specific concerns or restrictions?
+By understanding the problem and the data, we can plan our analysis more effectively, avoid incorrect assumptions and ensure accurate conclusions.
+Step 2: Importing and Inspecting the Data
+After understanding the problem and the data, next step is to import the data into our analysis environment such as Python, R or a spreadsheet tool. It’s important to find data to gain an basic understanding of its structure, variable types and any potential issues. Here’s what we can do:
+1.	Load the data into our environment carefully to avoid errors or truncations.
+2.	Check the size of the data like number of rows and columns to understand its complexity.
+3.	Check for missing values and see how they are distributed across variables since missing data can impact the quality of your analysis.
+4.	Identify data types for each variable like numerical, categorical, etc which will help in the next steps of data manipulation and analysis.
+5.	Look for errors or inconsistencies such as invalid values, mismatched units or outliers which could show major issues with the data.
+By completing these tasks we'll be prepared to clean and analyze the data more effectively.
+Step 3: Handling Missing Data
+Missing data is common in many datasets and can affect the quality of our analysis. During EDA it's important to identify and handle missing data properly to avoid biased or misleading results. Here’s how to handle it:
+1.	Understand the patterns and possible causes of missing data. Is it missing completely at random (MCAR), missing at random (MAR) or missing not at random (MNAR). Identifying this helps us to find best way to handle the missing data.
+2.	Decide whether to remove missing data or impute (fill in) the missing values. Removing data can lead to biased outcomes if the missing data isn’t MCAR. Filling values helps to preserve data but should be done carefully.
+3.	Use appropriate imputation methods like mean or median imputation, regression imputation or machine learning techniques like KNN or decision trees based on the data’s characteristics.
+4.	Consider the impact of missing data. Even after imputing, missing data can cause uncertainty and bias so understands the result with caution.
+Properly handling of missing data improves the accuracy of our analysis and prevents misleading conclusions.
+Step 4: Exploring Data Characteristics
+After addressing missing data we find the characteristics of our data by checking the distribution, central tendency and variability of our variables and identifying outliers or anomalies. This helps in selecting appropriate analysis methods and finding major data issues. We should calculate summary statistics like mean, median, mode, standard deviation, skewness and kurtosis for numerical variables. These provide an overview of the data’s distribution and helps us to identify any irregular patterns or issues.
+Step 5: Performing Data Transformation
+Data transformation is an important step in EDA as it prepares our data for accurate analysis and modeling. Depending on our data's characteristics and analysis needs, we may need to transform it to ensure it's in the right format. Common transformation techniques include:
+1.	Scaling or normalizing numerical variables like min-max scaling or standardization.
+2.	Encoding categorical variables for machine learning like one-hot encoding or label encoding.
+3.	Applying mathematical transformations like logarithmic square root to correct skewness or non-linearity.
+4.	Creating new variables from existing ones like calculating ratios or combining variables.
+5.	Aggregating or grouping data based on specific variables or conditions.
+Step 6: Visualizing Relationship of Data
+Visualization helps to find relationships between variables and identify patterns or trends that may not be seen from summary statistics alone.
+1.	For categorical variables, create frequency tables, bar plots and pie charts to understand the distribution of categories and identify imbalances or unusual patterns.
+2.	For numerical variables generate histograms, box plots, violin plots and density plots to visualize distribution, shape, spread and potential outliers.
+3.	To find relationships between variables use scatter plots, correlation matrices or statistical tests like Pearson’s correlation coefficient or Spearman’s rank correlation.
+Step 7: Handling Outliers
+Outliers are data points that differs from the rest of the data may caused by errors in measurement or data entry. Detecting and handling outliers is important because they can skew our analysis and affect model performance. We can identify outliers using methods like interquartile range (IQR), Z-scores or domain-specific rules. Once identified it can be removed or adjusted depending on the context. Properly managing outliers shows our analysis is accurate and reliable.
+Step 8: Communicate Findings and Insights
+The final step in EDA is to communicate our findings clearly. This involves summarizing the analysis, pointing out key discoveries and presenting our results in a clear way.
+1.	Clearly state the goals and scope of your analysis.
+2.	Provide context and background to help others understand your approach.
+3.	Use visualizations to support our findings and make them easier to understand.
+4.	Highlight key insights, patterns or anomalies discovered.
+5.	Mention any limitations or challenges faced during the analysis.
+6.	Suggest next steps or areas that need further investigation.
+Effective communication is important to ensure that our EDA efforts make an impact and that stakeholders understand and act on our insights. By following these steps and using the right tools, EDA helps in increasing the quality of our data, leading to more informed decisions and successful outcomes in any data-driven project.
+What is Feature Engineering?
+Last Updated : 04 Jul, 2025
+•	
+•	
+•	
+Feature engineering is the process of turning raw data into useful features that help improve the performance of machine learning models. It includes choosing, creating and adjusting data attributes to make the model’s predictions more accurate. The goal is to make the model better by providing relevant and easy-to-understand information.
+A feature or attribute is a measurable property of data that is used as input for machine learning algorithms. Features can be numerical, categorical or text-based representing essential data aspects which are relevant to the problem. For example in housing price prediction, features might include the number of bedrooms, location and property age.
+ Feature Engineering Architecture
+Importance of Feature Engineering
+Feature engineering can significantly influence model performance. By refining features, we can:
+•	Improve accuracy: Choosing the right features helps the model learn better, leading to more accurate predictions.
+•	Reduce overfitting: Using fewer, more important features helps the model avoid memorizing the data and perform better on new data.
+•	Boost interpretability: Well-chosen features make it easier to understand how the model makes its predictions.
+•	Enhance efficiency: Focusing on key features speeds up the model’s training and prediction process, saving time and resources.
+Processes Involved in Feature Engineering
+Lets see various features involved in feature engineering:
+ Processes involved in Feature Engineering
+1. Feature Creation: Feature creation involves generating new features from domain knowledge or by observing patterns in the data. It can be:
+•	Domain-specific: Created based on industry knowledge likr business rules.
+•	Data-driven: Derived by recognizing patterns in data.
+•	Synthetic: Formed by combining existing features.
+2. Feature Transformation: Transformation adjusts features to improve model learning:
+•	Normalization & Scaling: Adjust the range of features for consistency.
+•	Encoding: Converts categorical data to numerical form i.e one-hot encoding.
+•	Mathematical transformations: Like logarithmic transformations for skewed data.
+3. Feature Extraction: Extracting meaningful features can reduce dimensionality and improve model accuracy:
+•	Dimensionality reduction: Techniques like PCA reduce features while preserving important information.
+•	Aggregation & Combination: Summing or averaging features to simplify the model.
+4. Feature Selection: Feature selection involves choosing a subset of relevant features to use:
+•	Filter methods: Based on statistical measures like correlation.
+•	Wrapper methods: Select based on model performance.
+•	Embedded methods: Feature selection integrated within model training.
+5. Feature Scaling: Scaling ensures that all features contribute equally to the model:
+•	Min-Max scaling: Rescales values to a fixed range like 0 to 1.
+•	Standard scaling: Normalizes to have a mean of 0 and variance of 1.
+Steps in Feature Engineering
+Feature engineering can vary depending on the specific problem but the general steps are:
+1.	Data Cleansing: Identify and correct errors or inconsistencies in the dataset to ensure data quality and reliability.
+2.	Data Transformation: Transform raw data into a format suitable for modeling including scaling, normalization and encoding.
+3.	Feature Extraction: Create new features by combining or deriving information from existing ones to provide more meaningful input to the model.
+4.	Feature Selection: Choose the most relevant features for the model using techniques like correlation analysis, mutual information and stepwise regression.
+5.	Feature Iteration: Continuously refine features based on model performance by adding, removing or modifying features for improvement.
+Common Techniques in Feature Engineering
+1. One-Hot Encoding: One-Hot Encoding converts categorical variables into binary indicators, allowing them to be used by machine learning models.
+import pandas as pd
+
+data = {'Color': ['Red', 'Blue', 'Green', 'Blue']}
+df = pd.DataFrame(data)
+
+df_encoded = pd.get_dummies(df, columns=['Color'], prefix='Color')
+
+print(df_encoded)
+
+Output
+   Color_Blue  Color_Green  Color_Red
+0       False        False       True
+1        True        False      False
+2       False         True      False
+3        True        False      False
+2. Binning: Binning transforms continuous variables into discrete bins, making them categorical for easier analysis.
+import pandas as pd
+
+data = {'Age': [23, 45, 18, 34, 67, 50, 21]}
+df = pd.DataFrame(data)
+
+bins = [0, 20, 40, 60, 100]
+labels = ['0-20', '21-40', '41-60', '61+']
+
+df['Age_Group'] = pd.cut(df['Age'], bins=bins, labels=labels, right=False)
+
+print(df)
+
+Output
+   Age Age_Group
+0   23     21-40
+1   45     41-60
+2   18      0-20
+3   34     21-40
+4   67       61+
+5   50     41-60
+6   21     21-40
+3. Text Data Preprocessing: Involves removing stop-words, stemming and vectorizing text data to prepare it for machine learning models.
+import nltk
+from nltk.corpus import stopwords
+from nltk.stem import PorterStemmer
+from sklearn.feature_extraction.text import CountVectorizer
+
+texts = ["This is a sample sentence.", "Text data preprocessing is important."]
+
+stop_words = set(stopwords.words('english'))
+stemmer = PorterStemmer()
+vectorizer = CountVectorizer()
+
+
+def preprocess_text(text):
+    words = text.split()
+    words = [stemmer.stem(word)
+             for word in words if word.lower() not in stop_words]
+    return " ".join(words)
+
+
+cleaned_texts = [preprocess_text(text) for text in texts]
+
+X = vectorizer.fit_transform(cleaned_texts)
+
+print("Cleaned Texts:", cleaned_texts)
+print("Vectorized Text:", X.toarray())
+Output:
+ 
+4. Feature Splitting: Divides a single feature into multiple sub-features, uncovering valuable insights and improving model performance.
+import pandas as pd
+
+data = {'Full_Address': [
+    '123 Elm St, Springfield, 12345', '456 Oak Rd, Shelbyville, 67890']}
+df = pd.DataFrame(data)
+
+df[['Street', 'City', 'Zipcode']] = df['Full_Address'].str.extract(
+    r'([0-9]+\s[\w\s]+),\s([\w\s]+),\s(\d+)')
+
+print(df)
+
+Output
+                     Full_Address      Street         City Zipcode
+0  123 Elm St, Springfield, 12345  123 Elm St  Springfield   12345
+1  456 Oak Rd, Shelbyville, 67890  456 Oak Rd  Shelbyville   67890...
+Tools for Feature Engineering
+There are several tools available for feature engineering. Here are some popular ones:
+•	Featuretools: Automates feature engineering by extracting and transforming features from structured data. It integrates well with libraries like pandas and scikit-learn making it easy to create complex features without extensive coding.
+•	TPOT: Uses genetic algorithms to optimize machine learning pipelines, automating feature selection and model optimization. It visualizes the entire process, helping you identify the best combination of features and algorithms.
+•	DataRobot: Automates machine learning workflows including feature engineering, model selection and optimization. It supports time-dependent and text data and offers collaborative tools for teams to efficiently work on projects.
+•	Alteryx: Offers a visual interface for building data workflows, simplifying feature extraction, transformation and cleaning. It integrates with popular data sources and its drag-and-drop interface makes it accessible for non-programmers.
+•	H2O.ai: Provides both automated and manual feature engineering tools for a variety of data types. It includes features for scaling, imputation and encoding and offers interactive visualizations to better understand model results.
+Machine Learning Model Evaluation
+Last Updated : 23 Jul, 2025
+•	
+•	
+•	
+Model evaluation is a process that uses some metrics which help us to analyze the performance of the model. Think of training a model like teaching a student. Model evaluation is like giving them a test to see if they truly learned the subject—or just memorized answers. It helps us answer:
+•	Did the model learn patterns?
+•	Will it fail on new questions?
+Model development is a multi-step process and we need to keep a check on how well the model do future predictions and analyze a models weaknesses. There are many metrics for that. Cross Validation is one technique that is followed during the training phase and it is a model evaluation technique.
+Cross-Validation: The Ultimate Practice Test
+Cross Validation is a method in which we do not use the whole dataset for training. In this technique some part of the dataset is reserved for testing the model. There are many types of Cross-Validation out of which K Fold Cross Validation is mostly used. In K Fold Cross Validation the original dataset is divided into k subsets. The subsets are known as folds. This is repeated k times where 1 fold is used for testing purposes, rest k-1 folds are used for training the model. It is seen that this technique generalizes the model well and reduces the error rate.
+Holdout is the simplest approach. It is used in neural networks as well as in many classifiers. In this technique the dataset is divided into train and test datasets. The dataset is usually divided into ratios like 70:30 or 80:20. Normally a large percentage of data is used for training the model and a small portion of dataset is used for testing the model.
+Evaluation Metrics for Classification Task
+Classification is used to categorize data into predefined labels or classes. To evaluate the performance of a classification model we commonly use metrics such as accuracy, precision, recall, F1 score and confusion matrix. These metrics are useful in assessing how well model distinguishes between classes especially in cases of imbalanced datasets. By understanding the strengths and weaknesses of each metric, we can select the most appropriate one for a given classification problem.
+In this Python code, we have imported the iris dataset which has features like the length and width of sepals and petals. The target values are Iris setosa, Iris virginica, and Iris versicolor. After importing the dataset we divided the dataset into train and test datasets in the ratio 80:20. Then we called Decision Trees and trained our model. After that, we performed the prediction and calculated the accuracy score, precision, recall, and f1 score. We also plotted the confusion matrix.
+Importing Libraries and Dataset
+import pandas as pd
+import numpy as np
+from sklearn import tree
+from sklearn import datasets
+from sklearn.datasets import load_iris
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.metrics import precision_score,\
+recall_score, f1_score, accuracy_score
+Now let's load the toy dataset iris flowers from the sklearn.datasets library and then split it into training and testing parts (for model evaluation) in the 80:20 ratio.
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Holdout method.Dividing the data into train and test
+X_train, X_test,\
+    y_train, y_test = train_test_split(X, y,
+                                       random_state=20,
+                                       test_size=0.20)
+Now, let's train a Decision Tree Classifier model on the training data, and then we will move on to the evaluation part of the model using different metrics.
+tree = DecisionTreeClassifier()
+tree.fit(X_train, y_train)
+y_pred = tree.predict(X_test)
+1. Accuracy
+Accuracy is defined as the ratio of number of correct predictions to the total number of predictions. This is the most fundamental metric used to evaluate the model. The formula is given by:
+Accuracy=TP+TNTP+TN+FP+FNAccuracy=TP+TN+FP+FNTP+TN
+However Accuracy has a drawback. It cannot perform well on an imbalanced dataset. Suppose a model classifies that the majority of the data belongs to the major class label. It gives higher accuracy, but in general model cannot classify on minor class labels and has poor performance.
+print("Accuracy:", accuracy_score(y_test,
+                                  y_pred))
+Output:
+Accuracy: 0.9333333333333333
+2. Precision and Recall
+Precision is the ratio of true positives to the summation of true positives and false positives. It basically analyses the positive predictions.
+Precision=TPTP+FPPrecision=TP+FPTP
+The drawback of Precision is that it does not consider the True  Negatives and False Negatives.
+Recall is the ratio of true positives to the summation of true positives and false negatives. It basically analyses the number of correct positive samples.
+Recall=TPTP+FNRecall=TP+FNTP
+The drawback of Recall is that often it leads to a higher false positive rate.
+print("Precision:", precision_score(y_test,
+                                    y_pred,
+                                    average="weighted"))
+
+print('Recall:', recall_score(y_test,
+                              y_pred,
+                              average="weighted"))
+Output:
+Precision: 0.9435897435897436
+Recall: 0.9333333333333333
+3. F1 score
+F1 score is the harmonic mean of precision and recall. It is seen that during the precision-recall trade-off if we increase the precision, recall decreases and vice versa. The goal of the F1 score is to combine precision and recall. 
+F1 Score=2×Precision×RecallPrecision+RecallF1 Score=Precision+Recall2×Precision×Recall
+# calculating f1 score
+print('F1 score:', f1_score(y_test, y_pred,
+                            average="weighted"))
+Output:
+F1 score: 0.9327777777777778
+4. Confusion Matrix
+Confusion matrix is a N x N matrix where N is the number of target classes. It represents number of actual outputs and predicted outputs. Some terminologies in the matrix are as follows:
+•	True Positives: It is also known as TP. It is the output in which the actual and the predicted values are YES.
+•	True Negatives:  It is also known as TN. It is the output in which the actual and the predicted values are NO.
+•	False Positives: It is also known as FP. It is the output in which the actual value is NO but the predicted value is YES.
+•	False Negatives:  It is also known as FN. It is the output in which the actual value is YES but the predicted value is NO.
+confusion_matrix = metrics.confusion_matrix(y_test,
+                                            y_pred)
+
+cm_display = metrics.ConfusionMatrixDisplay(
+    confusion_matrix=confusion_matrix,
+    display_labels=[0, 1, 2])
+
+cm_display.plot()
+plt.show()
+Output:
+ 
+Confusion matrix for the output of the model
+In the output the accuracy of model is 93.33%. Precision is approximately 0.944  and Recall is 0.933. F1 score is approximately 0.933. Finally the confusion matrix is plotted. Here class labels denote the target classes: 
+0 = Setosa
+1 = Versicolor
+2 = Virginica
+From the confusion matrix, we see that 8 setosa classes were correctly predicted. 11 Versicolor test cases were also correctly predicted by the model and 2 virginica test cases were misclassified. In contrast, the rest 9 were correctly predicted.
+5. AUC-ROC Curve
+AUC (Area Under Curve) is an evaluation metric that is used to analyze the classification model at different threshold values. The Receiver Operating Characteristic (ROC) curve is a probabilistic curve used to highlight the model's performance. The curve has two parameters:
+•	TPR: It stands for True positive rate. It basically follows the formula of Recall.
+•	FPR: It stands for False Positive rate. It is defined as the ratio of False positives to the summation of false positives and True negatives.
+This curve is useful as it helps us to determine the model's capacity to distinguish between different classes. Let us illustrate this with the help of a simple Python example
+import numpy as np
+from sklearn .metrics import roc_auc_score
+
+y_true = [1, 0, 0, 1]
+y_pred = [1, 0, 0.9, 0.2]
+auc = np.round(roc_auc_score(y_true,
+                             y_pred), 3)
+print("Auc", (auc))
+Output:
+Auc 0.75
+AUC score is a useful metric to evaluate the model. It highlights model's capacity to separate the classes. In the above code 0.75 is a good AUC score. A model is considered good if the AUC score is greater than 0.5 and approaches 1.
+Evaluation Metrics for Regression Task
+Regression is used to determine continuous values. It is mostly used to find a relation between a dependent and independent variable. For classification we use a confusion matrix, accuracy, f1 score, etc. But for regression analysis since we are predicting a numerical value it may differ from the actual output.  So we consider the error calculation as it helps to summarize how close the prediction is to the actual value. There are many metrics available for evaluating the regression model.
+In this Python Code we have implemented a simple regression model using the Mumbai weather CSV file. This file comprises Day, Hour, Temperature, Relative Humidity, Wind Speed and Wind Direction. The link for the dataset is here.
+ We are interested in finding relationship between Temperature and Relative Humidity. Here Relative Humidity is the dependent variable and Temperature is the independent variable. We performed linear regression and use different metrics to evaluate the performance of our model. To calculate the metrics we make extensive use of sklearn library.
+# importing the libraries
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_absolute_error,\
+    mean_squared_error, mean_absolute_percentage_error
+Now let's load the data into the panda's data frame and then split it into training and testing parts (for model evaluation) in the 80:20 ratio.
+df = pd.read_csv('weather.csv')
+X = df.iloc[:, 2].values
+Y = df.iloc[:, 3].values
+X_train, X_test,\
+    Y_train, Y_test = train_test_split(X, Y,
+                                       test_size=0.20,
+                                       random_state=0)
+Now, let's train a simple linear regression model. On the training data and we will move to the evaluation part of the model using different metrics.
+X_train = X_train.reshape(-1, 1)
+X_test = X_test.reshape(-1, 1)
+regression = LinearRegression()
+regression.fit(X_train, Y_train)
+Y_pred = regression.predict(X_test)
+1. Mean Absolute Error (MAE)
+This is the simplest metric used to analyze the loss over the whole dataset. As we know that error is basically the difference between the predicted and actual values. Therefore MAE is defined as the average of the errors calculated. Here we calculate the modulus of the error, perform summation and then divide the result by the total number of data points.  It is a positive value. The formula of MAE is given by
+MAE=∑i=1N∣ypred−yactual∣NMAE=N∑i=1N∣ypred−yactual∣
+mae = mean_absolute_error(y_true=Y_test,
+                          y_pred=Y_pred)
+print("Mean Absolute Error", mae)
+Output:
+Mean Absolute Error 1.7236295632503873
+2. Mean Squared Error(MSE)
+The most commonly used metric is Mean Square error or MSE. It is a function used to calculate the loss. We find the difference between the predicted values and actual variable, square the result and then find the average by all datapoints present in dataset. MSE is always positive as we square the values. Small the value of MSE better is the performance of our model. The formula of MSE is given:
+MSE=∑i=1N(ypred−yactual)2NMSE=N∑i=1N(ypred−yactual)2
+mse = mean_squared_error(y_true=Y_test,
+                         y_pred=Y_pred)
+print("Mean Square Error", mse)
+Output:
+Mean Square Error 3.9808057060106954
+3. Root Mean Squared Error(RMSE)
+RMSE is a popular method and is the extended version of MSE. It indicates how much the data points are spread around the best line. It is the standard deviation of the MSE. A lower value means that the data point lies closer to the best fit line.
+RMSE=∑i=1N(ypred−yactual)2NRMSE=N∑i=1N(ypred−yactual)2
+rmse = mean_squared_error(y_true=Y_test,
+                          y_pred=Y_pred,
+                          squared=False)
+print("Root Mean Square Error", rmse)
+Output:
+Root Mean Square Error 1.9951956560725306
+4. Mean Absolute Percentage Error (MAPE)
+MAPE is used to express the error in terms of percentage. It is defined as the difference between the actual and predicted value. The error is then divided by the actual value. The results are then summed up and finally and we calculate the average. Smaller the percentage better the performance of the model. The formula is given by
+MAPE=1N∑i=1N(∣ypred−yactual∣∣yactual∣)×100%MAPE=N1∑i=1N(∣yactual∣∣ypred−yactual∣)×100%
+mape = mean_absolute_percentage_error(Y_test,
+                                      Y_pred,
+                                      sample_weight=None,
+                                      multioutput='uniform_average')
+print("Mean Absolute Percentage Error", mape)
+Output:
+Mean Absolute Percentage Error 0.02334408993333347
+Evaluating machine learning models is a important step in ensuring their effectiveness and reliability in real-world applications. Using appropriate metrics such as accuracy, precision, recall, F1 score for classification and regression-specific measures like MAE, MSE, RMSE and MAPE can assess model performance for different tasks. Moreover adopting evaluation techniques like cross-validation and holdout ensures that models generalize well to unseen data.
+Gradient Descent in Linear Regression
+Last Updated : 29 Jul, 2025
+•	
+•	
+•	
+Gradient descent is a optimization algorithm used in linear regression to find the best fit line tohe data. It works by gradually by adjusting the line’s slope and intercept to reduce the difference between actual and predicted values. This process helps the model make accurate predictions by minimizing errors step by step. In this article we will see more about Gradient Descent and its core concepts in detail.
+ Gradient Descent in Linear Regression
+Above image shows two graphs, left one plots house prices against size to show errors measured by the cost function while right one shows how gradient descent moves downhill on the cost curve to minimize error by updating parameters step by step.
+Why Use Gradient Descent for Linear Regression?
+Linear regression finds the best-fit line for a dataset by minimizing the error between the actual and predicted values. This error is measured using the cost function usually Mean Squared Error (MSE). The goal is to find the model parameters i.e. the slope m and the intercept b that minimize this cost function.
+For simple linear regression, we can use formulas like Normal Equation to find parameters directly. However for large datasets or high-dimensional data these methods become computationally expensive due to:
+•	Large matrix computations.
+•	Memory limitations.
+In models like polynomial regression, the cost function becomes highly complex and non-linear, so analytical solutions are not available. That’s where gradient descent plays an important role even for:
+•	Large datasets.
+•	Complex, high-dimensional problems.
+How Does Gradient Descent Work in Linear Regression?
+Lets see various steps involved in the working of Gradient Descent in Linear Regression:
+1. Initializing Parameters: Start with random initial values for the slope (mm) and intercept (bb).
+2. Calculate the Cost Function: Measure the error using the Mean Squared Error (MSE):
+J(m,b)=1n∑i=1n(yi−(mxi+b))2J(m,b)=n1∑i=1n(yi−(mxi+b))2
+3. Compute the Gradient: Calculate how much the cost function changes with respect to mmand bb.
+•	For slope mm :
+∂J∂m=−2n∑i=1nxi(yi−(mxi+b))∂m∂J=−n2∑i=1nxi(yi−(mxi+b))
+•	For intercept bb:
+∂J∂b=−2n∑i=1n(yi−(mxi+b))∂b∂J=−n2∑i=1n(yi−(mxi+b))
+4. Update Parameters: Change mm and bb to reduce the error:
+•	For slope mm :
+m=m−α⋅∂J∂mm=m−α⋅∂m∂J
+•	For intercept bb :
+b=b−α⋅∂J∂bb=b−α⋅∂b∂J
+Here αα is the learning rate that controls the size of each update.
+5. Repeat: Keep repeating steps 2–4 until the error stops decreasing significantly.
+Implementation of Gradient Descent in Linear Regression
+Let’s implement linear regression step by step. To understand how gradient descent improves the model, we will first build a simple linear regression without using gradient descent and observe its results.
+Here we will be using Numpy, Pandas, Matplotlib and Sckit learn libraries for this.
+•	X, y = make_regression(n_samples=100, n_features=1, noise=15, random_state=42): Generating 100 data points with one feature and some noise for realism.
+•	X_b = np.c_[np.ones((m, 1)), X]: Addind a column of ones to X to account for the intercept term in the model.
+•	theta = np.array([[2.0], [3.0]]): Initializing model parameters (intercept and slope) with starting values.
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import make_regression
+
+X, y = make_regression(n_samples=100, n_features=1, noise=15, random_state=42)
+y = y.reshape(-1, 1)
+m = X.shape[0]
+
+X_b = np.c_[np.ones((m, 1)), X]
+
+theta = np.array([[2.0], [3.0]])
+
+plt.figure(figsize=(10, 5))
+plt.scatter(X, y, color="blue", label="Actual Data")
+plt.plot(X, X_b.dot(theta), color="green", label="Initial Line (No GD)")
+plt.xlabel("Feature")
+plt.ylabel("Target")
+plt.title("Linear Regression Without Gradient Descent")
+plt.legend()
+plt.show()
+Output:
+ Linear Regression without Gradient Descent
+Here the model’s predictions are not accurate and the line does not fit the data well. This happens because the initial parameters are not optimized which prevents the model from finding the best-fit line.
+Now we will apply gradient descent to improve the model and optimize these parameters.
+•	learning_rate = 0.1, n_iterations = 100: Set the learning rate and number of iterations for gradient descent to run respectively.
+•	gradients = (2 / m) * X_b.T.dot(y_pred - y): Finding gradients of the cost function with respect to parameters.
+•	theta -= learning_rate * gradients: Updating parameters by moving opposite to the gradient direction.
+learning_rate = 0.1
+n_iterations = 100
+
+for _ in range(n_iterations):
+
+    y_pred = X_b.dot(theta)
+
+    gradients = (2 / m) * X_b.T.dot(y_pred - y)
+
+    theta -= learning_rate * gradients
+
+plt.figure(figsize=(10, 5))
+plt.scatter(X, y, color="blue", label="Actual Data")
+plt.plot(X, X_b.dot(theta), color="red", label="Optimized Line (With GD)")
+plt.xlabel("Feature")
+plt.ylabel("Target")
+plt.title("Linear Regression With Gradient Descent")
+plt.legend()
+plt.show()
+Output:
+ Linear Regression with Gradient Descent
+Linear Regression with Gradient Descent shows how the model gradually learns to fit the line that minimizes the difference between predicted and actual values by updating parameters step by step.
+
+
